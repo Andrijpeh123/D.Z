@@ -28,7 +28,11 @@ def get_user_input():
             print('Некоректний місяць. Спробуйте ще раз.')
             continue
         return name, year, month
-
+def create_test_file(name, year, month):
+    with open('test_file.txt', 'w') as f:
+        f.write(f'Прізвище: {name}\n')
+        f.write(f'Рік народження: {year}\n')
+        f.write(f'Місяць народження: {month}\n')
 def main():
     name, year, month = get_user_input()
     create_test_file(name, year, month)

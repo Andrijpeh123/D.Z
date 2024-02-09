@@ -7,6 +7,15 @@ def validate_month(month):
             return True
     except ValueError:
         return False
+def validate_year(year):
+    try:
+        year = int(year)
+        if year < 5 or year > 120:
+            return False
+        else:
+            return True
+    except ValueError:
+        return False
 def get_user_input():
     while True:
         name=input("Введіть ваше ім'я:")
